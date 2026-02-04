@@ -47,7 +47,7 @@ else:
             st.session_state.chat_history = []
             st.rerun()
     
-    llm = ChatOllama(model="hf.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M")
+    llm = ChatOllama(model="hf.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M", base_url=OLLAMA_HOST)
     
     # Helper function to display a chat message
     def display_chat_message(question, response, user_name):
