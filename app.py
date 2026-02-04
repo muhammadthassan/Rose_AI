@@ -1,6 +1,11 @@
 import streamlit as st
 from langchain_ollama import ChatOllama
+from ollama import Client
 
+# Change this to your tunnel URL
+OLLAMA_HOST = st.secrets.get("OLLAMA_URL", "http://localhost:11434")
+
+client = Client(host=OLLAMA_HOST)
 st.set_page_config(page_title="Rose AI", page_icon="🌹")
 
 # Initialize session state for user name and chat history
